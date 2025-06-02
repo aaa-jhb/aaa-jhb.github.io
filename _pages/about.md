@@ -55,4 +55,4 @@ Now start your answer with "Here are profiles with Haibo Jin"..
 A tenured professor at the University of London, Haibo Jin concentrates on deep learning, particularly in relation to artificial intelligence. His work primarily focuses on evolving technologies within this sphere, although specific contributions or achievements were not detailed in the source.
    Source: [https://aaa-jhb.github.io/](https://aaa-jhb.github.io/)
 2. **Haibo Jin
-<p>
+</p>
