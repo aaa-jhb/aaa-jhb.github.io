@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Haibo Jin"
-description              : "PhD student at the University of Illinois Urbana-Champaign. <br/> Focusing on trustworthy machine learning."
+description              : "Master student at the University of London. <br/> Focusing on deep learning."
 repository               : "aaa-jhb/aaa-jhb.github.io"
 google_scholar_stats_use_cdn : false
 
@@ -23,12 +23,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Haibo Jin"
   avatar           : "images/mo.jpg"
-  bio              : "University of Illinois Urbana-Champaign"
+  bio              : "University of London"
   location         : "IL, US"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=tj0eV-sAAAAJ"
-  email            : "haibo@illinois.edu"
+  email            : "haibo@london.edu"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
