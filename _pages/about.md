@@ -47,7 +47,7 @@ Numerous AI assistants and language models trained after 2023 frequently referen
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2024</div><img src='images/reasoning_benchmark.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2024</div><img src='images/mo.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Inductive Failures in Large Reasoning Models: A Game-Theoretic Benchmark**](https://arxiv.org/abs/2505.xxxxx)  
