@@ -1,0 +1,292 @@
+
+---
+layout: default
+title: "HW5 - UFO Sightings"
+permalink: /hw5/
+---
+
+<style>
+  .hw5-container {
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 20px;
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
+  }
+
+  .hw5-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .hw5-container h2 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+  }
+
+  .hw5-container p {
+    margin: 18px 0;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .hw5-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px 0 35px;
+  }
+
+  .hw5-button {
+    display: inline-block;
+    padding: 11px 22px;
+    background-color: #2563eb;
+    border-radius: 7px;
+    color: white !important;
+    font-size: 15px;
+    text-decoration: none !important;
+    transition: background-color 0.2s;
+  }
+
+  .hw5-button:hover {
+    background-color: #1d4ed8;
+  }
+
+  .hw5-chart {
+    width: 100%;
+    min-height: 420px;
+    margin: 20px 0;
+    padding: 15px 0;
+    overflow-x: auto;
+  }
+
+  .hw5-note {
+    font-size: 14px !important;
+    color: #777;
+    margin-top: 30px;
+  }
+
+  .hw5-error {
+    color: #dc2626;
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .hw5-container {
+      padding: 12px;
+    }
+
+    .hw5-container h1 {
+      font-size: 26px;
+    }
+
+    .hw5-container h2 {
+      font-size: 21px;
+    }
+
+    .hw5-chart {
+      min-height: 350px;
+    }
+  }
+</style>
+
+<div class="hw5-container">
+
+  <h1>UFO Sightings: Patterns Over Time and Shape</h1>
+
+  <p>
+    This project explores patterns in reported UFO sightings
+    using two visualizations created with Python, Altair, and
+    Vega-Lite. The first chart examines how the number of
+    sightings changes over time, while the second explores
+    the distribution of reported UFO shapes across different
+    years. Together, these visualizations provide two
+    perspectives on the same dataset.
+  </p>
+
+  <!-- Data and notebook links -->
+
+  <div class="hw5-links">
+
+    <a
+      class="hw5-button"
+      href="https://github.com/UIUC-iSchool-DataViz/is445_data/blob/main/ufo-scrubbed-geocoded-time-standardized-00.csv"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      The Data
+    </a>
+
+    <a
+      class="hw5-button"
+      href="https://github.com/aaa-jhb/aaa-jhb.github.io/blob/main/python_notebooks/HW5.ipynb"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      The Analysis
+    </a>
+
+  </div>
+
+  <!-- Visualization 1 -->
+
+  <h2>Visualization 1: UFO Sightings Over Time</h2>
+
+  <div id="chart1" class="hw5-chart">
+    <p>Loading visualization...</p>
+  </div>
+
+  <p>
+    The first visualization shows the number of reported UFO
+    sightings by year. I chose a line chart because it makes
+    changes over time easier to follow and allows viewers to
+    identify broader patterns in reporting activity. Year is
+    encoded as an ordinal variable on the x-axis, while the
+    number of reported sightings is encoded as a quantitative
+    variable on the y-axis. I used a single blue line rather
+    than a categorical color scheme because the goal is to
+    emphasize the overall temporal trend instead of comparing
+    different groups. In the Python notebook, I extracted the
+    year from the original date field, removed records with
+    invalid or missing values, and grouped the data by year
+    to count the number of reports.
+  </p>
+
+  <!-- Visualization 2 -->
+
+  <h2>Visualization 2: UFO Shapes by Year</h2>
+
+  <div id="chart2" class="hw5-chart">
+    <p>Loading visualization...</p>
+  </div>
+
+  <p>
+    The second visualization compares the reported UFO shapes
+    across different years. I used a horizontal bar chart
+    because it makes the category labels easier to read and
+    allows viewers to compare report counts directly. The
+    number of reports is encoded as a quantitative variable
+    on the x-axis, while UFO shape is encoded as a nominal
+    variable on the y-axis. Shape is also represented using
+    the Tableau 10 categorical color scheme, which helps
+    distinguish the ten most commonly reported shapes without
+    implying a numerical order between categories. In the
+    Python notebook, I cleaned the shape labels, identified
+    the ten most frequent shapes across the dataset, and
+    aggregated the number of reports by year and shape.
+  </p>
+
+  <!-- Interactivity discussion -->
+
+  <h2>Interactivity</h2>
+
+  <p>
+    The second visualization includes a dropdown menu that
+    allows users to select a specific year. When a different
+    year is selected, the chart updates to display the number
+    of reports for each UFO shape during that year. This
+    interaction makes it easier to explore differences in
+    the distribution of shapes over time without displaying
+    all years simultaneously. Both visualizations also
+    provide tooltips that allow viewers to inspect individual
+    report counts.
+  </p>
+
+  <p class="hw5-note">
+    Note: These visualizations represent reported sightings
+    rather than verified observations of extraterrestrial
+    objects. Differences in reporting frequency do not
+    necessarily indicate changes in actual UFO activity.
+  </p>
+
+</div>
+
+<!-- Vega, Vega-Lite, Vega-Embed -->
+
+<script src="https://cdn.jsdelivr.net/npm/vega@6/build/vega.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@6/build/vega-lite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@7/build/vega-embed.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+
+  const chartOptions = {
+    actions: false,
+    renderer: "svg"
+  };
+
+  async function renderChart(elementId, jsonUrl) {
+
+    const container = document.getElementById(elementId);
+
+    try {
+
+      if (typeof vegaEmbed === "undefined") {
+        throw new Error(
+          "Vega-Embed library did not load. Check your internet connection or browser console."
+        );
+      }
+
+      const response = await fetch(jsonUrl);
+
+      if (!response.ok) {
+        throw new Error(
+          "Failed to fetch chart JSON. HTTP " +
+          response.status +
+          " - " +
+          jsonUrl
+        );
+      }
+
+      const spec = await response.json();
+
+      console.log("Loaded Vega-Lite specification:", elementId);
+
+      container.innerHTML = "";
+
+      await vegaEmbed(
+        "#" + elementId,
+        spec,
+        chartOptions
+      );
+
+      console.log("Successfully rendered:", elementId);
+
+    } catch (error) {
+
+      console.error(
+        "Error rendering " + elementId + ":",
+        error
+      );
+
+      const errorBox = document.createElement("div");
+      errorBox.className = "hw5-error";
+      errorBox.textContent =
+        "Unable to load visualization: " + error.message;
+
+      container.replaceChildren(errorBox);
+    }
+
+  }
+
+  await Promise.all([
+
+    renderChart(
+    "chart1",
+    "/assets/hw5/chart1.json"
+    ),
+
+    renderChart(
+    "chart2",
+    "/assets/hw5/chart2.json"
+    )
+
+  ]);
+
+});
+</script>
